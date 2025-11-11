@@ -1,0 +1,33 @@
+﻿@model no12finalproject.Models.Order
+
+@{
+    ViewData["Title"] = "訂單詳細";
+}
+
+<h2>訂單詳細</h2>
+<div class="table-container-thtd">
+<div class="table-container">
+<table class="table">
+    <tr>
+        <th>訂單ID</th>
+        <td>@Model.OrderID</td>
+    </tr>
+    <tr>
+        <th>訂單時間</th>
+        <td>@Model.OrderTime</td>
+    </tr>
+    <tr>
+        <th>總金額</th>
+        <td>@Model.TotalPrice</td>
+    </tr>
+    <tr>
+        <th>用戶名稱</th>
+        <td>@Model.User?.Name</td>
+    </tr>
+    <tr>
+        <th>用戶聯絡</th>
+        <td>@Model.User?.Contact</td>
+    </tr>
+</table>
+</div>
+</div>

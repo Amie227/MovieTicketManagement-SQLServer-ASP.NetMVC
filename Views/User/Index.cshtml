@@ -1,0 +1,27 @@
+﻿@model IEnumerable<no12finalproject.Models.User>
+
+@{
+    ViewData["Title"] = "用戶列表";
+}
+
+<h2>用戶列表</h2>
+<div class="table-container">
+<table class="table">
+    <thead>
+        <tr>
+            <th>姓名</th>
+            <th>聯絡方式</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in Model)
+        {
+            <tr>
+                <td>@u.Name</td>
+                <td>@u.Contact</td>
+                    <td><a href="/User/Details/@u.UserID" class="details-link">詳細</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

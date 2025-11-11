@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ROBOTX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <style>
+        
+
+        tbody td {
+            text-align: center right !important;
+        }
+
+        thead th {
+            padding: 0 60px; 
+        }
+
+        .table-container-thtd {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+            .table-container-thtd table {
+                border-collapse: separate;
+                border-spacing: 20px; /* 增加欄位之間的間距 */
+            }
+
+            .table-container-thtd th,
+            .table-container-thtd td {
+                padding: 0px 30px; /* 增加內邊距，讓文字與邊界的距離變大 */
+            }
+
+
+
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: url('/images/bg-city.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.75);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .navbar .brand {
+                font-size: 1.8rem;
+                color: #ff3c3c;
+                font-weight: bold;
+            }
+
+            .navbar .nav-links a {
+                color: #ff3c3c;
+                margin-left: 1.5rem;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
+
+                .navbar .nav-links a:hover {
+                    color: white;
+                }
+
+        .main-content {
+            padding: 120px 40px 40px 40px;
+            text-align: center;
+        }
+
+            .main-content h1 {
+                font-size: 3rem;
+                color: #ff3c3c;
+                margin-bottom: 1rem;
+            }
+
+            .main-content p {
+                font-size: 1.2rem;
+                color: #ccc;
+            }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .details-link {
+            color: #ffcc00; /* 更改為你喜歡的顏色 */
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+            .details-link:hover {
+                color: #ffffff;
+            }
+
+        .table-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .brand a {
+            color: red; /* 設定為紅色 */
+            text-decoration: none; /* 移除底線（可選） */
+            font-weight: bold; /* 讓字體更醒目（可選） */
+        }
+
+            .brand a:hover {
+                color: darkred; /* 滑鼠懸停時變成深紅色（可選） */
+            }
+
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <div class="navbar">
+        <div class="brand"><a href="https://localhost:7007/Home/Index">MOVIE</a></div>
+        <div class="nav-links">
+            <a href="https://localhost:7007/Movie/Index">電影管理</a>
+            <a href="https://localhost:7007/Order/Index">訂單管理</a>
+            <a href="https://localhost:7007/Payment/Index">付款管理</a>
+            <a href="https://localhost:7007/Seat/Index">座位管理</a>
+            <a href="https://localhost:7007/Showtime/Index">場次管理</a>
+            <a href="https://localhost:7007/User/Index">用戶管理</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        @RenderBody()
+    </div>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

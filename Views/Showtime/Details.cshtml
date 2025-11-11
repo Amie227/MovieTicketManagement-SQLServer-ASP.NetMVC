@@ -1,0 +1,25 @@
+﻿@model no12finalproject.Models.Showtime
+
+@{
+    ViewData["Title"] = "場次詳細";
+}
+
+<h2>場次詳細</h2>
+<div class="table-container-thtd">
+<div class="table-container">
+<table class="table">
+    <tr>
+        <th>電影標題</th>
+        <td>@Model.Movie?.Title</td>
+    </tr>
+    <tr>
+        <th>價格</th>
+        <td>@Model.Price</td>
+    </tr>
+    <tr>
+        <th>開始時間</th>
+        <td>@Model.StartTime</td>
+    </tr>
+</table>
+</div>
+</div>

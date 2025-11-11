@@ -1,0 +1,33 @@
+﻿@model IEnumerable<no12finalproject.Models.Movie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>電影列表</h2>
+<div class="table-container">
+<table class="table">
+    <thead>
+        <tr>
+            <th>標題</th>
+            <th>導演</th>
+            <th>上映日期</th>
+            <th>分類</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td class="text-center">@movie.Title</td>
+                <td class="text-center">@movie.Director</td>
+                <td class="text-center">@movie.ReleaseDate.ToShortDateString()</td>
+                <td class="text-center">@movie.Category</td>
+                <td class="text-center">
+                    <a href="/Movie/Details/@movie.MovieID" class="details-link">詳細</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,28 @@
+﻿@model no12finalproject.Models.Movie
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>電影詳細資料</h2>
+<div class="table-container">
+    <div class="table-container-thtd">
+<table class="table">
+    <tr>
+        <th>標題</th>
+        <td>@Model.Title</td>
+    </tr>
+    <tr>
+        <th>導演</th>
+        <td>@Model.Director</td>
+    </tr>
+    <tr>
+        <th>上映日期</th>
+        <td>@Model.ReleaseDate.ToShortDateString()</td>
+    </tr>
+    <tr>
+        <th>分類</th>
+        <td>@Model.Category</td>
+    </tr>
+</table>
+</div>
+</div>

@@ -1,0 +1,29 @@
+﻿@model no12finalproject.Models.Seat
+
+@{
+    ViewData["Title"] = "座位詳細";
+}
+
+<h2>座位詳細</h2>
+<div class="table-container-thtd">
+<div class="table-container">
+<table class="table">
+    <tr>
+        <th>座位ID</th>
+        <td>@Model.SeatID</td>
+    </tr>
+    <tr>
+        <th>場次開始時間</th>
+        <td>@Model.Showtime?.StartTime</td>
+    </tr>
+    <tr>
+        <th>排</th>
+        <td>@Model.Row</td>
+    </tr>
+    <tr>
+        <th>列</th>
+        <td>@Model.Col</td>
+    </tr>
+</table>
+</div>
+</div>

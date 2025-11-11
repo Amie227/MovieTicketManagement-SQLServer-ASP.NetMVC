@@ -1,0 +1,29 @@
+﻿@model IEnumerable<no12finalproject.Models.Seat>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h2>座位列表</h2>
+<div class="table-container">
+<table class="table">
+    <thead>
+        <tr>
+            <th>場次</th>
+            <th>排</th>
+            <th>列</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.Showtime?.StartTime</td>
+                <td>@s.Row</td>
+                <td>@s.Col</td>
+                <td><a href="/Seat/Details/@s.SeatID" class="details-link">詳細</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,33 @@
+﻿@model no12finalproject.Models.Payment
+
+@{
+    ViewData["Title"] = "付款詳細";
+}
+
+<h2>付款詳細</h2>
+<div class="table-container-thtd">
+<div class="table-container">
+<table class="table">
+    <tr>
+        <th>付款ID</th>
+        <td>@Model.PaymentID</td>
+    </tr>
+    <tr>
+        <th>付款時間</th>
+        <td>@Model.PaymentTime</td>
+    </tr>
+    <tr>
+        <th>付款金額</th>
+        <td>@Model.Amount</td>
+    </tr>
+    <tr>
+        <th>訂單ID</th>
+        <td>@Model.OrderID</td>
+    </tr>
+    <tr>
+        <th>付款方式</th>
+        <td>@Model.PaymentMethod?.MethodName</td>
+    </tr>
+</table>
+</div>
+</div>

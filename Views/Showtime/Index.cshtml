@@ -1,0 +1,29 @@
+﻿@model IEnumerable<no12finalproject.Models.Showtime>
+
+@{
+    ViewData["Title"] = "場次列表";
+}
+
+<h2>場次列表</h2>
+<div class="table-container">
+<table class="table">
+    <thead>
+        <tr>
+            <th>電影標題</th>
+            <th>價格</th>
+            <th>開始時間</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.Movie?.Title</td>
+                <td>@s.Price</td>
+                <td>@s.StartTime</td>
+                    <td><a href="/Showtime/Details/@s.ShowtimeID" class="details-link">詳細</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

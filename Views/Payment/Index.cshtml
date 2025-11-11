@@ -1,0 +1,30 @@
+﻿@model IEnumerable<no12finalproject.Models.Payment>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>付款紀錄</h2>
+<div class="table-container">
+<table class="table">
+    <thead>
+        <tr>
+            <th>付款時間</th>
+            <th>金額</th>
+            <th>付款方式</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.PaymentTime</td>
+                <td>@p.Amount</td>
+                <td>@p.PaymentMethod?.MethodName</td>
+                <td><a href="/Payment/Details/@p.PaymentID" class="details-link">詳細</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>
+

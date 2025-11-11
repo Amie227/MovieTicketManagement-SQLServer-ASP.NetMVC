@@ -1,0 +1,21 @@
+﻿@model no12finalproject.Models.User
+
+@{
+    ViewData["Title"] = "用戶詳細";
+}
+
+<h2>用戶詳細</h2>
+<div class="table-container-thtd">
+<div class="table-container">
+<table class="table">
+    <tr>
+        <th>姓名</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>聯絡方式</th>
+        <td>@Model.Contact</td>
+    </tr>
+</table>
+</div>
+</div>
