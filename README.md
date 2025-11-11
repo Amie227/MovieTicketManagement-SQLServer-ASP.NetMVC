@@ -1,1 +1,0 @@
-# MovieTicketManagement-SQLServer-ASP.NetMVC
